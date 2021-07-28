@@ -10,7 +10,10 @@
     "client": "yarn --cwd ./client start",
     "deploy": "yarn --cwd ./client build && yarn --cwd ./server start",
     "deploy-cluster": "yarn --cwd ./client build && yarn --cwd ./server cluster",
-    "watch": "concurrently \"yarn server\" \"yarn client\""
+    "watch": "concurrently \"yarn server\" \"yarn client\"",
+    "server-test": "yarn --cwd ./server test",
+    "client-test": "yarn --cwd ./client test",
+    "test": "concurrently \"yarn server-test\" \"yarn client-test\""
   },
   "license": "MIT",
   "dependencies": {},
